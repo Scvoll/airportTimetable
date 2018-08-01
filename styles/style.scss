@@ -75,9 +75,7 @@ body {
         font: 2em Georgia, serif;
         margin: 10px 0 10px ;
     }
-    .input {
 
-    }
     .buttons {
         position: fixed;
         left: 1000px;
@@ -112,8 +110,12 @@ body {
             border-bottom: 1px solid #d5d1ce;
             padding-bottom: 10px;
         }
+        tr:hover {
+            background-color: white;
+        }
         td {
             padding: 3px;
+
         }
     }
 
