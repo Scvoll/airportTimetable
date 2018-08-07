@@ -1,30 +1,6 @@
 # airport Timetable
 
+Timetable SVO(Sheremetyevo International Airport) with fliters : Arrival, departure, delay. There is flight number search.
+
 run : node server.js
 
-P.S. Так как на выдачу ключа к API аэропортов требуется несколько дней, а обещался сделать на этой неделе,
-пришлось грабить DOM стороннего сайта).
-А положить данные в репо посчитал не лучшим выходом - пропадает динамика.
-
-# Ticker Task
-
-```
-function Ticker() {
-    this._i = 0
-}
-
-Ticker.prototype.tick = (function () {
-    console.log(++this._i);
-});
-
-let ticker = new Ticker();
-
-setInterval(ticker.tick.bind(ticker),1000);
-```
-
-Почему не работало ДО : Контекст this для ticket потерялся при передаче функции в интервал.<br>
-Решение : привязать контекст через bind, либо передать в интервал анонимную функцию c запуском ticker.tick(),<br>
-и тогда мы достанем this._i из замыкания.
-
-Также исправил присвоение метода прототипу, чтобы не потерять constructor.<br>
-Поставил инкремент перед this._i, для наглядности таймера.
